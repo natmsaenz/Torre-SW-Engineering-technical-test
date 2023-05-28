@@ -8,3 +8,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Profile />
   </React.StrictMode>,
 )
+
