@@ -4,8 +4,10 @@ import SkillGroup from "./SkillGroup";
 import Navbar from "./Navbar";
 import { fetchUserData } from "./DataServices";
 import "./Profile.css";
+import { useParams } from "react-router-dom";
 
 function Profile() {
+  const {username} = useParams();
   const [userData, setUserData] = useState({});
   const skillsData = [{
     proficiency: "Beginner",
@@ -25,15 +27,16 @@ skills: ["Ruby", "C++"]
 
   useEffect(() =>{
     async function fetchData(){
-      const userData = await fetchUserData('natmsaenz25');
+      console.log(window.location)
+      const userData = await fetchUserData(username);
       //const skillsData = await fetchSkillsData();
 
       setUserData(userData);
       //setSkillsData(skillsData);
     }
     fetchData();
-  }, []);
-console.log('user: ',{userData, skillsData})
+  }, [username]);
+console.log('user: ',username)
   return (
  <>
     <Navbar />

@@ -52,11 +52,17 @@
     color: #ECF9FE;
   }
   .skill-group li .skill-button.intermediate:hover {
-    background-color: #613DC1;
-    color: #ECF9FE;
+    background-color: #ECF9FE;
+    border-color: #858AE3;
+    color: #4E148C;
   }
   
   .skill-group li .skill-button.expert {
     background-color: #4E148C;
     color: #ECF9FE;
+  }
+  .skill-group li .skill-button.expert:hover {
+    background-color: #ECF9FE;
+    border-color: #858AE3;
+    color: #4E148C;
   }

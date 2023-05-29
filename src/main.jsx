@@ -1,11 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Profile from './Profile.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./Router.jsx";
+import "./index.css";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Profile />
-  </React.StrictMode>,
-)
+    <App />
+  </React.StrictMode>
+);
 
+export default App;
