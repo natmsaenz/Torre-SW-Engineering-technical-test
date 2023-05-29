@@ -37,31 +37,31 @@
     text-transform: uppercase;
   }
   
-  .skill-group li .skill-button.beginner {
+  .skill-group li .skill-button.no-experience-interested {
     background-color: #858AE3;
     color: #ECF9FE;
   }
-  .skill-group li .skill-button.beginner:hover {
+  .skill-group li .skill-button.no-experience-interested:hover {
     background-color: #ECF9FE;
     border-color: #858AE3;
     color: #4E148C;
   }
   
-  .skill-group li .skill-button.intermediate {
+  .skill-group li .skill-button.novice {
     background-color: #613DC1;
     color: #ECF9FE;
   }
-  .skill-group li .skill-button.intermediate:hover {
+  .skill-group li .skill-button.novice:hover {
     background-color: #ECF9FE;
     border-color: #858AE3;
     color: #4E148C;
   }
   
-  .skill-group li .skill-button.expert {
+  .skill-group li .skill-button.proficient {
     background-color: #4E148C;
     color: #ECF9FE;
   }
-  .skill-group li .skill-button.expert:hover {
+  .skill-group li .skill-button.proficient:hover {
     background-color: #ECF9FE;
     border-color: #858AE3;
     color: #4E148C;

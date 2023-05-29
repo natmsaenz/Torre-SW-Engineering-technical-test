@@ -1,6 +1,7 @@
 # Torre SW Engineering technical testing
 
 This is a web development technical testing for Torre.co, it consists of building a page to list the skills of any given user. This project helps to understand my skills and strengths in the:
+
     - Familiarity and usage of languages and frameworks chosen
     - Project structure and architecture
     - Code readability and scalability

@@ -7,12 +7,26 @@ const defaultUser = {
   }
 }
 
+
+function groupByProficiency(data){
+  return data.reduce((result,item) => {
+    const {proficiency} = item;
+    if(!result[proficiency]){
+      result[proficiency] = [];
+    }
+    result[proficiency].push(item);
+    return result;
+  },{});
+}
+
 export async function fetchUserData(username) {
     try {
       const response = await fetch(`${API_URL}/bios/${username}`);
       const data = await response.json();
-      const {person} = data || defaultUser;
-      return person;
+      const {person,strengths} = data || defaultUser;
+
+      const skills = groupByProficiency(strengths);
+      return {person,skills};
     } catch (error) {
       console.error('Error fetching user data:', error);
       return defaultUser;
@@ -29,4 +43,5 @@ export async function fetchUserData(username) {
       return [];
     }
   }
+  
   
