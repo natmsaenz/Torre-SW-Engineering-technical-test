@@ -27,6 +27,7 @@ export async function fetchUserData(username) {
       const response = await fetch(`${API_URL}/bios/${username}`, {method:'GET',mode:'no-cors'});
 
       const data = await response.json();
+      console.log(data)
       const {person,strengths} = data || defaultUser;
 
       const skills = groupByProficiency(strengths)||[];
