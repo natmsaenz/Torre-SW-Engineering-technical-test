@@ -1,6 +1,7 @@
 //Functions for API integration and to fetch the API data
 // const CORS_URL = 'https://cors-anywhere.herokuapp.com/' 
 const API_URL = `https://torre.bio/api`
+
 const defaultUser = {
   person : {
     name: "",
@@ -23,7 +24,8 @@ function groupByProficiency(data){
 
 export async function fetchUserData(username) {
     try {
-      const response = await fetch(`${API_URL}/bios/${username}`);
+      const response = await fetch(`${API_URL}/bios/${username}`, {method:'GET',mode:'no-cors'});
+
       const data = await response.json();
       const {person,strengths} = data || defaultUser;
 
