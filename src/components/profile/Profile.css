@@ -19,10 +19,13 @@
 .name {
   font-size: 24px;
   margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .skills {
   margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 
 .skills h3 {

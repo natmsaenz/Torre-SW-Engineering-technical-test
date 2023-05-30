@@ -1,12 +1,55 @@
 import React from "react"; // eslint-disable-line no-unused-vars
 import PropTypes from "prop-types";
-import { FaStar, FaCode, FaCogs } from "react-icons/fa";
+import {
+  FaStar,
+  FaLightbulb,
+  FaBookOpen,
+  FaCrown,
+  FaTrophy,
+} from "react-icons/fa";
 import "./SkillGroup.css";
 
 export function SkillGroup({ proficiency, skills }) {
+  const getSkillIcon = (proficiency) => {
+    //eslint-disable-line no-unused-vars
+    switch (proficiency) {
+      case "no-experience-interested":
+        return <FaLightbulb />;
+      case "proficient":
+        return <FaStar />;
+      case "novice":
+        return <FaBookOpen />;
+      case "expert":
+        return <FaTrophy />;
+      case "master":
+        return <FaCrown />;
+      default:
+        return null;
+    }
+  };
+  const getTitleByProficiency = (proficiency) => {
+    switch (proficiency) {
+      case "no-experience-interested":
+        return "No Experience, but Interested";
+      case "proficient":
+        return "Proficient";
+      case "novice":
+        return "Novice";
+      case "expert":
+        return "Expert";
+      case "master":
+        return "Master";
+      default:
+        return "";
+    }
+  };
   return (
     <div className="skill-group">
-      <h4>{proficiency}</h4>
+      <h4>
+        {getSkillIcon(proficiency)}
+        {getTitleByProficiency (proficiency)}
+      </h4>
+
       {skills.map((skill, index) => (
         <Skill
           key={index}
@@ -19,25 +62,9 @@ export function SkillGroup({ proficiency, skills }) {
 }
 
 function Skill({ proficiency, name }) {
-  const getSkillIcon = (proficiency) => {
-    //eslint-disable-line no-unused-vars
-    switch (proficiency) {
-      case "no-experience-interested":
-        return <FaStar />;
-      case "proficient":
-        return <FaCode />;
-      case "novice":
-        return <FaCogs />;
-      default:
-        return null;
-    }
-  };
   return (
     <div className="skill">
-      <button className={`skill-button ${proficiency}`}>
-        {getSkillIcon(proficiency)}
-        {name}
-      </button>
+      <button className={`skill-button ${proficiency}`}>{name}</button>
     </div>
   );
 }

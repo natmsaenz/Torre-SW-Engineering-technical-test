@@ -3,8 +3,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Profile from "./Profile.jsx";
-import "./index.css";
+import Profile from "../components/profile/Profile.jsx";
+import "../index.css";
 
 let router = createBrowserRouter([
   {
