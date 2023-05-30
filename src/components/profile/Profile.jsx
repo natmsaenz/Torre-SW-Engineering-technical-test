@@ -4,11 +4,11 @@ import { SkillGroup } from "../skills/SkillGroup";
 import Navbar from "../navbar/Navbar";
 import { fetchUserData } from "../../data-services/DataServices";
 import "./Profile.css";
-import { useParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 function Profile() {
-  
-  const { username } = useParams();
+  const [searchParams] = useSearchParams();
+  const username = searchParams.get("username");
   const [userData, setUserData] = useState({});
   const [skillsData, setSkillsData] = useState({});
 
@@ -40,11 +40,7 @@ function Profile() {
         <div className="skills">
           <h3>Skills and interests</h3>
           {Object.entries(skillsData).map(([proficiency, skills], index) => (
-            <SkillGroup
-              key={index}
-              proficiency={proficiency}
-              skills={skills}
-            />
+            <SkillGroup key={index} proficiency={proficiency} skills={skills} />
           ))}
         </div>
       </div>
