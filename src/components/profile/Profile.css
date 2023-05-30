@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.profile {
+  padding: 20px;
+  background-color: #7364D2;
+  color: #ECF9FE;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.skills {
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.skills h3 {
+  color: #ECF9FE;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.skill-group {
+  margin-bottom: 10px;
+}
+
+.skill-group h4 {
+  color: #ECF9FE;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.skill-group ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-group li {
+  color: #ECF9FE;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+

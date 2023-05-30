@@ -1,0 +1,165 @@
+/* SkillGroup.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+/* SkillGroup.css */
+
+.skill-group {
+display: flex;
+justify-content:space-between;
+flex-direction: column;
+}
+
+ .skill {
+  display: flex;
+ 
+} 
+h4{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+
+}
+
+.skill-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.skill-button:focus {
+  outline: none;
+}
+
+
+
+/* Colors for different proficiency levels */
+.no-experience-interested {
+  background-color: #ECF9FE;
+  color: #613DC1;
+}
+
+.no-experience-interested:hover {
+  color: #ECF9FE;
+  background-color: #613DC1;
+}
+.proficient {
+  background-color: #291899;
+  color: #ECF9FE;
+}
+
+.proficient:hover {
+  color: #291899;
+  background-color: #ECF9FE;
+}
+
+.novice {
+  background-color: #2402ff;
+  color: #ffffff;
+}
+
+.novice:hover {
+  color: #2402ff;
+  background-color: #ffffff;
+}
+
+.expert {
+  background-color: #613DC1;
+  color: #ECF9FE;
+}
+
+.expert:hover {
+  color: #613DC1;
+  background-color: #ECF9FE;
+}
+
+.master {
+  background-color: #5A17A1;
+  color: #b2a1e2;
+}
+
+.master:hover {
+  color: #5A17A1;
+  background-color: #b2a1e2;
+}
+
+
+/* Styles for skill icons */
+
+
+/* .skill-group {
+    margin-bottom: 10px;
+  }
+  
+  .skill-group h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .skill-group ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .skill-group li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+  }
+  
+  .skill-group li .skill-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .skill-group li .skill-button.no-experience-interested {
+    background-color: #858AE3;
+    color: #ECF9FE;
+  }
+  .skill-group li .skill-button.no-experience-interested:hover {
+    background-color: #ECF9FE;
+    border-color: #858AE3;
+    color: #4E148C;
+  }
+  
+  .skill-group li .skill-button.novice {
+    background-color: #613DC1;
+    color: #ECF9FE;
+  }
+  .skill-group li .skill-button.novice:hover {
+    background-color: #ECF9FE;
+    border-color: #858AE3;
+    color: #4E148C;
+  }
+  
+  .skill-group li .skill-button.proficient {
+    background-color: #4E148C;
+    color: #ECF9FE;
+  }
+  .skill-group li .skill-button.proficient:hover {
+    background-color: #ECF9FE;
+    border-color: #858AE3;
+    color: #4E148C;
+  } */
