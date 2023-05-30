@@ -19,7 +19,6 @@ export default function App() {
      <Router>
        <Switch>
          <Route path='/Torre-SW-Engineering-technical-test' exact component={Profile}/>
-         <Route path='/Torre-SW-Engineering-technical-test/profile/natmsaenz25' exact component={Profile}/>
        </Switch>
      </Router>
     </div>
