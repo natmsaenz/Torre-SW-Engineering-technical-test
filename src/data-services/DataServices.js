@@ -1,6 +1,6 @@
 //Functions for API integration and to fetch the API data
 // const CORS_URL = 'https://cors-anywhere.herokuapp.com/'
-const API_URL = `https://torre.bio/api`;
+const API_URL = `https://bio.torre/api`;
 
 const defaultUser = {
   person: {
