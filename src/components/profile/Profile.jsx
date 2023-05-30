@@ -15,7 +15,7 @@ function Profile() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const { person, skills } = await fetchUserData(username);
+        const { person, skills=[] } = await fetchUserData(username);
         console.log({ person, skills });
 
         setUserData(person);
