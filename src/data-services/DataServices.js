@@ -29,6 +29,7 @@ export async function fetchUserData(username) {
     };
     const response = await fetch(`${API_URL}/bios/${username}`, options);
 
+    console.log("Fetching...");
     const data = await response.json();
     console.log(await data);
     const { person, strengths } = data || defaultUser;
