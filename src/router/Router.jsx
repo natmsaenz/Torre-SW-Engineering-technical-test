@@ -8,7 +8,7 @@ import "../index.css";
 
 let router = createBrowserRouter([
   {
-    path: "/Torre-SW-Engineering-technical-test/",
+    path: "/Torre-SW-Engineering-technical-test",
     element: <Profile />,
   },
 ]);
