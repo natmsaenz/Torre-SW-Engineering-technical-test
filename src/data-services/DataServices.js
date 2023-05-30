@@ -23,13 +23,13 @@ function groupByProficiency(data) {
 
 export async function fetchUserData(username) {
   try {
-    // const options = {
-    //   method: "GET",
-    //   mode: "no-cors",
-    // };
-    const response = await fetch(`${API_URL}/bios/${username}`);
+    const options = {
+      method: "GET",
+      mode: "no-cors",
+    };
+    const response = await fetch(`${API_URL}/bios/${username}`, options);
 
-    console.log("Fetching...");
+    console.log("Fetching...", response);
     const data = await response.json();
     console.log(await data);
     const { person, strengths } = data || defaultUser;
