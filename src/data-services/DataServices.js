@@ -29,7 +29,7 @@ export async function fetchUserData(username) {
       const data = await response.json();
       const {person,strengths} = data || defaultUser;
 
-      const skills = groupByProficiency(strengths);
+      const skills = groupByProficiency(strengths)||[];
       return {person,skills};
     } catch (error) {
       console.error('Error fetching user data:', error);
