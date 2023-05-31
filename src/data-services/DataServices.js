@@ -1,4 +1,5 @@
 //Functions for API integration and to fetch the API data
+import "./setupProxy"
 const CORS_URL = 'https://cors-anywhere.herokuapp.com'
 const API_URL = `${CORS_URL}/https://bio.torre.co/api`;
 
@@ -21,13 +22,13 @@ function groupByProficiency(data) {
   }, {});
 }
 
-export async function fetchUserData(username) {
+export async function fetchUserData(username) { // eslint-disable-line no-unused-vars
   try {
     // const options = {
     //   method: "GET",
     //   mode: "no-cors",
     // };
-    const response = await fetch(`${API_URL}/bios/${username}`);
+    const response = await fetch('/api//https://bio.torre.co/api');
 
     console.log("Fetching...", response);
     const data = await response.json();
