@@ -1,5 +1,5 @@
 //Functions for API integration and to fetch the API data
-import "./setupProxy"
+import "./setupProxy.js"
 const CORS_URL = 'https://cors-anywhere.herokuapp.com'
 const API_URL = `${CORS_URL}/https://bio.torre.co/api`;
 
