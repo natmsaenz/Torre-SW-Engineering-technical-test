@@ -1,7 +1,6 @@
 //Functions for API integration and to fetch the API data
-import {middlewareProxy} from"./setupProxy" // eslint-disable-line no-unused-vars
-const CORS_URL = 'https://cors-anywhere.herokuapp.com'
-const API_URL = `${CORS_URL}/https://bio.torre.co/api`;
+// const CORS_URL = 'https://cors-anywhere.herokuapp.com/'
+const API_URL = `https://bio.torre.co/api`;
 
 const defaultUser = {
   person: {
@@ -22,13 +21,13 @@ function groupByProficiency(data) {
   }, {});
 }
 
-export async function fetchUserData(username) { // eslint-disable-line no-unused-vars
+export async function fetchUserData(username) {
   try {
     // const options = {
     //   method: "GET",
     //   mode: "no-cors",
     // };
-    const response = await fetch('/api/https://bio.torre.co/api');
+    const response = await fetch(`${API_URL}/bios/${username}`);
 
     console.log("Fetching...", response);
     const data = await response.json();
