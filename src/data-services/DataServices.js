@@ -1,7 +1,6 @@
 //Functions for API integration and to fetch the API data
 const CORS_URL = 'https://cors-anywhere.herokuapp.com'
 const API_URL = `${CORS_URL}/https://bio.torre.co/api`;
-const url = `${CORS_URL}/${API_URL}/?username=natmsaenz25`;
 
 const defaultUser = {
   person: {
@@ -22,13 +21,13 @@ function groupByProficiency(data) {
   }, {});
 }
 
-export async function fetchUserData(username) {// eslint-disable-line no-unused-vars
+export async function fetchUserData(username) {
   try {
     // const options = {
     //   method: "GET",
     //   mode: "no-cors",
     // };
-    const response = await fetch(`${url}`);
+    const response = await fetch(`${API_URL}/bios/${username}`);
 
     console.log("Fetching...", response);
     const data = await response.json();
@@ -45,7 +44,7 @@ export async function fetchUserData(username) {// eslint-disable-line no-unused-
 
 export async function fetchSkillsData(id) {
   try {
-    const response = await fetch(`${url}/opportunities/${id}`);
+    const response = await fetch(`${API_URL}/opportunities/${id}`);
     const data = await response.json();
     return data || [];
   } catch (error) {
